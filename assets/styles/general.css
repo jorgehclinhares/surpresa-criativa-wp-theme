@@ -1,0 +1,75 @@
+:root {
+  --conf-max-width: 1200px;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #1A1A1A;
+  --color-orange-light: #E6D5CB;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(var(--color-orange-light), var(--color-white));
+  margin: 0;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+header .header-top {
+  width: 100%;
+  max-width: var(--conf-max-width);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+header .header-top nav ul {
+  margin: 0px;
+}
+
+header .header-top nav ul li {
+  display: inline-block;
+  margin: 0 8px;
+  list-style: none;
+  font-size: 1em;
+  color: var(--color-gray);
+}
+
+header .header-top nav ul li a {
+  text-decoration: none;
+  color: var(--color-gray);
+  transition: color 0.3s ease;
+}
+
+header .header-top input {
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 24px;
+  font-size: 1em;
+  padding: 6px 8px;
+}
+
+header .header-bottom {
+  width: 100%;
+  max-width: var(--conf-max-width);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
