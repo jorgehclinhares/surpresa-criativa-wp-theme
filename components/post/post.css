@@ -1,0 +1,17 @@
+.post {
+  margin: 40px 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post article {
+  width: 100%;
+  max-width: var(--conf-max-width);
+  padding: 20px;
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}

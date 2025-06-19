@@ -47,6 +47,12 @@
   border-radius: 16px;
 }
 
+@media screen and (max-width: 768px) {
+  .home-posts__post {
+    width: calc(50% - 8px);
+  }
+}
+
 .home-posts__post:hover {
   border-color: var(--color-pink-dark);
   animation: fadeIn 0.2s ease-in-out;
@@ -73,7 +79,8 @@
 .home-posts__post-date {
   font-size: 12px;
   color: var(--color-pink-dark);
-  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 0px;
 }
 
 .home-posts__post-image {

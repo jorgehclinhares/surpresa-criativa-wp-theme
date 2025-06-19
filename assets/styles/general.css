@@ -20,6 +20,12 @@ body {
   font-size: 14px;
 }
 
+a,
+a:visited {
+  color: var(--color-pink-dark);
+  transition: color 0.3s ease;
+}
+
 header {
   width: 100%;
   height: auto;
@@ -76,4 +82,27 @@ header .header-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(var(--color-white), var(--color-orange-light));
+  padding: 24px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 60px;
+}
+
+footer img {
+  height: 60px;
+}
+
+footer p {
+  font-size: 14px;
+  color: var(--color-gray-medium);
+  margin: 0;
 }
