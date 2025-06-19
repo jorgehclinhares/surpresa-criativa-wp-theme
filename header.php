@@ -20,12 +20,19 @@
     <div class="header-top">
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Loja</a></li>
+          <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
+          <li><a href="<?php echo esc_url(home_url('/blog')); ?>">Blog</a></li>
+          <li><a href="<?php echo esc_url(home_url('/loja')); ?>">Loja</a></li>
         </ul>
       </nav>
-      <input type="search" placeholder="Pesquisar...">
+      <form role="search" method="get" class="custom-search-form" action="<?php echo esc_url(home_url('/')); ?>" onsubmit="return validarBusca(this);">
+        <label>
+          <span class="screen-reader-text"><?php echo _x('Pesquisar por:', 'label') ?></span>
+          <input type="search" placeholder="<?php echo esc_attr_x('Digite sua busca', 'placeholder') ?>"
+            value="<?php echo get_search_query() ?>" name="s" />
+        </label>
+        <button type="submit" class="btn btn-light"><?php echo esc_html_x('Buscar', 'submit button') ?></button>
+      </form>
     </div>
     <div class="header-bottom">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/svgs/logo.svg" alt="Logo">

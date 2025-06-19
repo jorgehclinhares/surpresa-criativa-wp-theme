@@ -1,10 +1,10 @@
-<section class="search">
-	<div class="search__content">
-		<div class="search__header">
+<section class="search-container">
+	<div class="search-container__content">
+		<div class="search-container__header">
 			<h2>Resultados da pesquisa por: "{{ search_query }}"</h2>
 		</div>
 
-		<div class="search__results">
+		<div class="search-container__results">
 			{% if posts %}
 				{% for post in posts %}
 					<div class="card mb-3">

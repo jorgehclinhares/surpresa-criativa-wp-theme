@@ -1,4 +1,4 @@
-.search {
+.search-container {
   margin: 40px 0;
   width: 100%;
   height: auto;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.search__content {
+.search-container__content {
   width: 100%;
   max-width: var(--conf-max-width);
   padding: 20px;
@@ -17,26 +17,26 @@
   box-shadow: var(--shadow);
 }
 
-.search__header h2 {
+.search-container__header h2 {
   font-size: 16px;
   margin-bottom: 24px;
 }
 
-.search__results ul {
+.search-container__results ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.search__results li {
+.search-container__results li {
   margin-bottom: 16px;
 }
 
-.search__results .card-title {
+.search-container__results .card-title {
   font-size: 16px;
 }
 
-.search__results .card-text {
+.search-container__results .card-text {
   font-size: 14px;
   color: var(--color-gray-medium);
 }

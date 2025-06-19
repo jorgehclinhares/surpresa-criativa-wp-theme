@@ -14,9 +14,11 @@
 			<div class="carousel-inner">
 				{% for post in posts_highlights %}
 					{% if post.meta('banner_destaque_url') %}
-						<div class="carousel-item active">
-							<img src="{{ post.meta('banner_destaque_url') }}" class="d-block w-100" alt="Banner {{ post.title }}">
-						</div>
+						<a href="{{ post.link }}" class="carousel-item-link">
+							<div class="carousel-item active">
+								<img src="{{ post.meta('banner_destaque_url') }}" class="d-block w-100" alt="Banner {{ post.title }}">
+							</div>
+						</a>
 					{% endif %}
 				{% endfor %}
 			</div>
