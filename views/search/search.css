@@ -1,0 +1,42 @@
+.search {
+  margin: 40px 0;
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search__content {
+  width: 100%;
+  max-width: var(--conf-max-width);
+  padding: 20px;
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.search__header h2 {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.search__results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search__results li {
+  margin-bottom: 16px;
+}
+
+.search__results .card-title {
+  font-size: 16px;
+}
+
+.search__results .card-text {
+  font-size: 14px;
+  color: var(--color-gray-medium);
+}
