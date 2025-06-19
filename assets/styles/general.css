@@ -1,9 +1,12 @@
 :root {
-  --conf-max-width: 1100px;
+  --conf-max-width: 1000px;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-gray: #1a1a1a;
+  --color-gray-dark: #1a1a1a;
+  --color-gray-light: #f5f5f5;
+  --color-gray-medium: #667085;
   --color-orange-light: #e6d5cb;
+  --color-pink-dark: #b9365e;
 }
 
 html,
@@ -13,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
   font-size: 14px;
 }
 
@@ -49,12 +52,12 @@ header .header-top nav ul li {
   margin: 0 8px;
   list-style: none;
   font-size: 1em;
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
 }
 
 header .header-top nav ul li a {
   text-decoration: none;
-  color: var(--color-gray);
+  color: var(--color-gray-dark);
   transition: color 0.3s ease;
 }
 
