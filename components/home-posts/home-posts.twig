@@ -14,9 +14,9 @@
 					</div>
 					<p class="home-posts__post-excerpt">
 						{% if post.excerpt|length > 0 %}
-							{{ post.excerpt|striptags|truncate(150, '...') }}
+							{{ post.excerpt|striptags|truncate(60, '...') }}
 						{% elseif post.content %}
-							{{ post.content|striptags|truncate(150, '...') }}
+							{{ post.content|striptags|truncate(60, '...') }}
 							{% else %}
 						{% endif %}
 					</p>
