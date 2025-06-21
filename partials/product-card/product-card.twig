@@ -1,0 +1,17 @@
+<div class="product-card__post">
+	<a
+		href="{{ product.permalink }}">
+		{% if product.image_url %}
+			<div class="product-card__post-image" style="background-image: url({{ product.image_url }})"></div>
+		{% else %}
+			<div class="product-card__post-image" style="background-image: url({{ theme.link ~ '/assets/images/default-thumbnail.jpg' }})"></div>
+		{% endif %}
+		<p class="product-card__post-date">
+			{{ product.price_html|raw }}
+		</p>
+		<div class="product-card__post-title">
+			<h2>{{ product.name }}</h2>
+			<img src="{{ theme.link }}/assets/images/svgs/arrow-link-open.svg" alt="Icone abrir publicação" class="product-card__thumbnail"/>
+		</div>
+	</a>
+</div>

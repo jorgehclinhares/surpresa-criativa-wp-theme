@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html {{ function('language_attributes') }}>
+
+	<head>
+		<meta charset="{{ site.charset }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ wp_title }}</title>
+		{{ function('wp_head') }}
+		<link rel="stylesheet" href="{{ theme.link }}/assets/styles/general.css">
+		<link rel="stylesheet" href="{{ theme.link }}/partials/carousel/carousel.css">
+		<link rel="stylesheet" href="{{ theme.link }}/partials/home-posts/home-posts.css">
+		<link rel="stylesheet" href="{{ theme.link }}/partials/post-card/post-card.css">
+		<link rel="stylesheet" href="{{ theme.link }}/partials/product-card/product-card.css">
+		<link rel="stylesheet" href="{{ theme.link }}/views/post/post.css">
+		<link rel="stylesheet" href="{{ theme.link }}/views/search/search.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	</head>
+
+	<body {{ function('body_class') }}>
+
+		{% include "partials/header/header.twig" %}
+
+		<main>
+			<section class="main__content"> {% block content %}{% endblock %}
+				</section>
+			</main>
+
+			{% include "partials/footer/footer.twig" %}
+
+			{{ function('wp_footer') }}
+
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+			<script>
+				function validarBusca(form) {
+var termo = form.s.value.trim();
+if (termo.length === 0) {
+window.location.href = "<?php echo esc_url(home_url('/')); ?>";
+return false;
+}
+return true;
+}
+			</script>
+
+		</body>
+	</html>

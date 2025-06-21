@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<h1>Loja</h1>
+	{% if products %}
+		{% for product in products %}
+			{% include "partials/product-card/product-card.twig" with { 'product': product, 'theme': theme} %}
+		{% endfor %}
+	{% else %}
+		<p>Nenhum produto encontrado.</p>
+	{% endif %}
+{% endblock %}

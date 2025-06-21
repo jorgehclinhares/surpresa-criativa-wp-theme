@@ -6,11 +6,6 @@
   margin-top: 40px;
 }
 
-.carousel-section .carousel-section__container {
-  width: 100%;
-  max-width: var(--conf-max-width);
-}
-
 .carousel-section .carousel-section__header {
   display: flex;
   flex-direction: row;

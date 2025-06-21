@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<article class="single-product">
+	<h1>{{ post.title }}</h1>
+	<div
+		class="product-image">{# <img src="{{ product.get_image_id() | wp_get_attachment_image_url('large') }}" alt="{{ post.title }}"> #}
+	</div>
+	<div class="product-price">
+		{{ product.get_price_html()|raw }}
+	</div>
+	<div class="product-meta">
+		Categorias:
+		{% for term in product.get_categories() %}
+			{{ term }}
+		{% endfor %}
+	</div>
+	<div class="product-description">
+		{{ post.content }}
+	</div>
+	<div class="add-to-cart">
+		{{ function('woocommerce_template_single_add_to_cart') }}
+	</div>
+</article>
+{% endblock %}

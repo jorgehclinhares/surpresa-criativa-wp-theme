@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php Timber::render('components/header.twig', Timber::context()); ?>
 
 <?php
 $context = Timber::context();

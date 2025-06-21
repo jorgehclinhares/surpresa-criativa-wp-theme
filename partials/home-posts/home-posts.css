@@ -1,0 +1,34 @@
+.home-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.home-posts__header {
+  width: 100%;
+}
+
+.home-posts__header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--conf-text-color);
+  margin: 0;
+}
+
+.home-posts__list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.home-posts__list h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--color-gray-dark);
+}

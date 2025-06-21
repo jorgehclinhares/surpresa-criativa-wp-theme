@@ -1,0 +1,34 @@
+<div class="post-card__post">
+	<a
+		href="{{ post.link }}">
+		{% if post.thumbnail %}
+			<div class="post-card__post-image" style="background-image: url({{ post.thumbnail }})"></div>
+		{% else %}
+			<div class="post-card__post-image" style="background-image: url({{ theme.link ~ '/assets/images/default-thumbnail.jpg' }})"></div>
+		{% endif %}
+		<p class="post-card__post-date">
+			<i class="bi bi-calendar"></i> {{ post.date|date("j M Y") }}
+		</p>
+		<div class="post-card__post-title">
+			<h2>{{ post.title }}</h2>
+			<img src="{{ theme.link }}/assets/images/svgs/arrow-link-open.svg" alt="Icone abrir publicação" class="post-card__thumbnail"/>
+		</div>
+		<p class="post-card__post-excerpt">
+			{% if post.excerpt|length > 0 %}
+				{{ post.excerpt|striptags|truncate(60, '...') }}
+			{% elseif post.content %}
+				{{ post.content|striptags|truncate(60, '...') }}
+				{% else %}
+			{% endif %}
+		</p>
+	</a>
+	{% if post.tags|length > 0 %}
+		<div class="post-card__post-tags">
+			{% for tag in post.tags %}
+				{% if tag.name|trim is not empty %}
+					<a href="{{ tag.link }}">{{ tag.name }}</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>
