@@ -21,14 +21,16 @@
 
 		{% include "partials/header/header.twig" %}
 
-		<main>
-			<section class="main__content"> {% block content %}{% endblock %}
-				</section>
-			</main>
+		<main class="main__content">
+			{% block content %}
+			{% endblock %}
+		</main>
 
 			{% include "partials/footer/footer.twig" %}
 
 			{{ function('wp_footer') }}
+
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7958120111099331" crossorigin="anonymous"></script>
 
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 			<script>
